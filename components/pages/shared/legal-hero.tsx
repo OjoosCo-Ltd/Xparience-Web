@@ -14,7 +14,7 @@ export function LegalHero({
     <section className="bg-[#f5f7f9] px-5 pt-10 sm:px-8 lg:px-12">
       <div className="mx-auto w-full max-w-7xl">
         <div
-          className="w-full rounded-[3rem] bg-contain bg-center bg-no-repeat px-6 py-16 sm:px-14 sm:py-24 lg:px-20"
+          className="w-full overflow-hidden rounded-r-[3rem] bg-cover bg-left bg-no-repeat px-6 py-16 sm:px-14 sm:py-24 lg:px-20"
           style={{ backgroundImage: "url('/images/terms-bg.png')" }}
         >
           <span className="inline-block rounded-full border-2 border-[#1f5063] px-4 py-1.5 text-xs font-bold uppercase tracking-[0.15em] text-[#1f5063]">
