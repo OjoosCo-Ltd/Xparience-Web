@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Search, Rocket, Banknote, Sparkles, ShieldCheck, Headset, UserSearch } from "lucide-react";
 
 const TOPIC_CHIPS = ["Account", "Billing", "Virtual Date", "Security"];
@@ -9,36 +10,42 @@ const CATEGORIES = [
     icon: UserSearch,
     tile: "bg-[#a3d4f2] text-[#1f4f63]",
     title: "About Xparience",
+    href: "/about",
     body: "Learn what Xparience is and how it works",
   },
   {
     icon: Rocket,
     tile: "bg-[#a3d4f2] text-[#1f4f63]",
     title: "Getting Started",
+    href: "/how-it-works",
     body: "Everything you need to begin your journey on Xparience",
   },
   {
     icon: Banknote,
     tile: "bg-[#a3d4f2] text-[#1f4f63]",
     title: "Subscriptions and Pricing",
+    href: "/pricing",
     body: "Transparency in every transaction. Manage plans and payments.",
   },
   {
     icon: Sparkles,
     tile: "bg-[#f7d9d2] text-[#1f4f63]",
     title: "Matching and Features",
+    href: "/features",
     body: "Master the art of meaningful digital connection and immersive events.",
   },
   {
     icon: ShieldCheck,
     tile: "bg-[#f8d3cf] text-[#c74a3b]",
     title: "Privacy and Safety",
+    href: "/safety",
     body: "Your peace of mind is paramount. Report issues and stay secure.",
   },
   {
     icon: Headset,
     tile: "bg-[#dfe2e6] text-[#3d4a52]",
     title: "Support",
+    href: "#faq",
     body: "Find help, guidance, and answers to your questions anytime",
   },
 ];
@@ -84,9 +91,10 @@ export function SupportHero() {
       {/* Category cards, overlapping the panel bottom */}
       <div className="relative z-10 mx-auto -mt-36 grid w-full max-w-[88rem] gap-6 px-0 sm:grid-cols-2 sm:px-6 lg:-mt-40 lg:grid-cols-3 lg:gap-8 lg:px-10">
         {CATEGORIES.map((category) => (
-          <div
+          <Link
             key={category.title}
-            className="rounded-[2rem] bg-white px-8 py-10 text-center shadow-sm"
+            href={category.href}
+            className="rounded-[2rem] bg-white px-8 py-10 text-center shadow-sm transition-shadow hover:shadow-md"
           >
             <span
               className={`mx-auto flex size-16 items-center justify-center rounded-2xl ${category.tile}`}
@@ -99,7 +107,7 @@ export function SupportHero() {
             <p className="mx-auto mt-3 max-w-xs text-base leading-relaxed text-slate-600">
               {category.body}
             </p>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
