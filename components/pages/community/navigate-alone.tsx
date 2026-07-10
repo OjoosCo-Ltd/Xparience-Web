@@ -32,7 +32,7 @@ export function NavigateAlone() {
             up at your best.
           </p>
           <Link
-            href="/features"
+            href="/how-it-works"
             className="mt-8 inline-flex items-center gap-2 font-semibold text-brand transition-opacity hover:opacity-80"
           >
             Explore our tools

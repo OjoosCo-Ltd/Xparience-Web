@@ -30,7 +30,7 @@ export function LevelUp() {
               Begin Your Journey
             </Link>
             <Link
-              href="/features"
+              href="/how-it-works"
               className="flex items-center gap-3 font-semibold text-[#16191c] transition-opacity hover:opacity-75"
             >
               <CirclePlay className="size-6 text-[#1f5063]" strokeWidth={2} />

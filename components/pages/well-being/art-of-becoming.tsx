@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+// Link and ArrowRight imports removed while the blog CTA below is hidden.
 
 const GUIDES = [
   {
@@ -31,13 +30,14 @@ export function ArtOfBecoming() {
             grounded version of yourself. Our editorial guides explore the
             deep intersections of identity, desire, and digital ethics.
           </p>
+          {/* Hidden until the blog goes live:
           <Link
             href="/blog"
             className="mt-10 inline-flex items-center gap-2 font-bold text-[#16191c] underline underline-offset-4 transition-opacity hover:opacity-75"
           >
             Read the Wellness Journal
             <ArrowRight className="size-5" />
-          </Link>
+          </Link> */}
         </div>
 
         {/* Guides */}

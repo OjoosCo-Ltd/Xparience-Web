@@ -37,7 +37,7 @@ export function DateHero() {
               Get Started
             </Link>
             <Link
-              href="/features"
+              href="/how-it-works"
               className="w-full rounded-full bg-[#e9ebee] px-10 py-4 text-center text-base font-semibold text-slate-800 shadow-sm transition-colors hover:bg-[#dfe2e6] sm:w-auto"
             >
               How It Works

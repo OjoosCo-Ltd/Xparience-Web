@@ -6,23 +6,25 @@ import { AtSign } from "lucide-react";
 import { useLeadForm } from "@/lib/use-lead-form";
 
 const LINK_COLUMNS = [
-  {
-    heading: "Features",
-    links: [
-      { label: "Well-being", href: "/well-being" },
-      { label: "Virtual Date", href: "/virtual-dates" },
-      { label: "Community", href: "/community" },
-      { label: "Events", href: "/events" },
-      { label: "AI Physical Date Suggestion", href: "/date-suggestions" },
-    ],
-  },
+  // Features column is hidden until those pages go live (restore sm:grid-cols-3 below when re-adding):
+  // {
+  //   heading: "Features",
+  //   links: [
+  //     { label: "Well-being", href: "/well-being" },
+  //     { label: "Virtual Date", href: "/virtual-dates" },
+  //     { label: "Community", href: "/community" },
+  //     { label: "Events", href: "/events" },
+  //     { label: "AI Physical Date Suggestion", href: "/date-suggestions" },
+  //   ],
+  // },
   {
     heading: "Resources",
     links: [
       { label: "FAQ", href: "/support#faq" },
       { label: "Contact", href: "/contact" },
-      { label: "Blog", href: "/blog" },
-      { label: "Pricing", href: "/pricing" },
+      // Blog and Pricing are hidden until those pages go live:
+      // { label: "Blog", href: "/blog" },
+      // { label: "Pricing", href: "/pricing" },
       { label: "Press at Xparience", href: "/press" },
     ],
   },
@@ -186,7 +188,7 @@ export function SiteFooter() {
             </p>
           </div>
 
-          <div className="grid gap-10 sm:grid-cols-3 sm:gap-6">
+          <div className="grid gap-10 sm:grid-cols-2 sm:gap-6">
             {LINK_COLUMNS.map((column) => (
               <div key={column.heading}>
                 <h3 className="text-sm font-semibold uppercase tracking-[0.15em] text-white/90">

@@ -24,14 +24,14 @@ const CATEGORIES = [
     icon: Banknote,
     tile: "bg-[#a3d4f2] text-[#1f4f63]",
     title: "Subscriptions and Pricing",
-    href: "/pricing",
+    href: "#faq",
     body: "Transparency in every transaction. Manage plans and payments.",
   },
   {
     icon: Sparkles,
     tile: "bg-[#f7d9d2] text-[#1f4f63]",
     title: "Matching and Features",
-    href: "/features",
+    href: "/how-it-works",
     body: "Master the art of meaningful digital connection and immersive events.",
   },
   {
