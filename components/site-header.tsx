@@ -9,10 +9,13 @@ import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
   { label: "About", href: "/about" },
-  { label: "Features", href: "/features" },
+  { label: "How It Works", href: "/how-it-works" },
+  // Features, Blog, and Pricing are hidden until those pages go live:
+  // { label: "Features", href: "/features" },
   { label: "Support", href: "/support" },
-  { label: "Blog", href: "/blog" },
-  { label: "Pricing", href: "/pricing" },
+  { label: "Contact", href: "/contact" },
+  // { label: "Blog", href: "/blog" },
+  // { label: "Pricing", href: "/pricing" },
 ];
 
 export function SiteHeader() {

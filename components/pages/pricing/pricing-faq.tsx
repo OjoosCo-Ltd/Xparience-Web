@@ -7,19 +7,19 @@ import {
 
 const FAQS = [
   {
-    question: "Can I switch plans later?",
+    question: "Is Xparience free to use?",
     answer:
-      "Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.",
+      "Xparience offers a free tier that gives you access to core features, including profile creation, matches, wellbeing resources, and interest-based groups. Premium tiers unlock additional features, including virtual dates, conversation assistants, and access to our Elite human-assisted matchmaking and coaching services.",
   },
   {
-    question: "What are “Premium Experiences”?",
+    question: "How do I cancel my subscription?",
     answer:
-      "Premium Experiences are our curated virtual dates — shared activities like watching a film together, planning a meal, shopping, or playing a game in real time. Premium and Elite members get the full set of experience templates, designed to make remote time together feel intimate and intentional.",
+      "You can cancel your subscription at any time from the app’s Settings menu. Cancellation takes effect at the end of your current billing period. You will continue to have access to premium features until then. We do not charge cancellation fees.",
   },
   {
-    question: "Is my data secure?",
+    question: "Do you offer refunds?",
     answer:
-      "Yes. Your data is encrypted in transit and at rest, and we never sell your personal information. Xparience is registered with the Information Commissioner’s Office under UK GDPR, and you can request an export or deletion of your data at any time.",
+      "We do not offer refunds for unused portions of a subscription period, except where required by UK consumer law. If you believe you are entitled to a refund or have been charged in error, please contact us at support@xparience.com, and we will be happy to help.",
   },
 ];
 
