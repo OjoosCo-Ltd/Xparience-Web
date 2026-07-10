@@ -43,7 +43,6 @@ const LINK_COLUMNS = [
   },
 ];
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars -- kept for when this account goes live
 function XIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -52,7 +51,6 @@ function XIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars -- kept for when this account goes live
 function TikTokIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -85,7 +83,6 @@ function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars -- kept for when this account goes live
 function YouTubeIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -95,10 +92,21 @@ function YouTubeIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 const SOCIALS = [
-  // X, TikTok, and YouTube are hidden until those accounts have URLs:
-  // { label: "X", href: "#", icon: <XIcon className="size-4" /> },
-  // { label: "TikTok", href: "#", icon: <TikTokIcon className="size-4" /> },
-  // { label: "YouTube", href: "#", icon: <YouTubeIcon className="size-4.5" /> },
+  {
+    label: "X",
+    href: "https://x.com/xparience",
+    icon: <XIcon className="size-4" />,
+  },
+  {
+    label: "TikTok",
+    href: "https://www.tiktok.com/@xparience?_r=1&_t=ZN-972wsHivszW",
+    icon: <TikTokIcon className="size-4" />,
+  },
+  {
+    label: "YouTube",
+    href: "https://youtube.com/@xparience?si=ZABWEbtY1kIDr2wP",
+    icon: <YouTubeIcon className="size-4.5" />,
+  },
   {
     label: "Instagram",
     href: "https://www.instagram.com/xparience?igsh=MW9yMDV5a3IyazIxOQ%3D%3D&utm_source=qr",
