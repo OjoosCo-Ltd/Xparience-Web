@@ -139,21 +139,29 @@ export function SiteFooter() {
             </p>
           </div>
           <div>
-            <form
-              className="flex overflow-hidden rounded-full bg-white"
-              onSubmit={handleSubmit}
-            >
-              <input
-                name="email"
-                type="email"
-                required
-                placeholder="Enter your email address"
-                className="w-full min-w-0 flex-1 px-6 py-4 text-base text-slate-700 placeholder:text-slate-400 focus:outline-none"
-              />
+            <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <input
+                  name="name"
+                  type="text"
+                  required
+                  placeholder="Enter your name"
+                  aria-label="Your name"
+                  className="w-full min-w-0 flex-1 rounded-full bg-white px-6 py-4 text-base text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-white/60"
+                />
+                <input
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="Enter your email address"
+                  aria-label="Your email address"
+                  className="w-full min-w-0 flex-1 rounded-full bg-white px-6 py-4 text-base text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-white/60"
+                />
+              </div>
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="shrink-0 rounded-full bg-[#006786] px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-[#00546d] disabled:cursor-not-allowed disabled:opacity-70 sm:px-10"
+                className="w-full rounded-full bg-[#006786] px-10 py-4 text-base font-semibold text-white transition-colors hover:bg-[#00546d] disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto sm:self-end"
               >
                 {status === "submitting" ? "Sending…" : "Subscribe"}
               </button>

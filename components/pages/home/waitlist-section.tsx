@@ -25,24 +25,32 @@ export function WaitlistSection() {
               the first to try it.
             </p>
 
-            <form
-              className="mt-10 flex flex-col gap-4 sm:flex-row"
-              onSubmit={handleSubmit}
-            >
+            <form className="mt-10 flex flex-col gap-4" onSubmit={handleSubmit}>
               <input
-                name="email"
-                type="email"
+                name="name"
+                type="text"
                 required
-                placeholder="Enter your email"
+                placeholder="Enter your name"
+                aria-label="Your name"
                 className="w-full max-w-105 rounded-full bg-white px-6 py-4 text-base text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-white/60"
               />
-              <button
-                type="submit"
-                disabled={status === "submitting"}
-                className="shrink-0 rounded-full bg-[#006786] px-10 py-4 text-base font-semibold text-white shadow-md transition-colors hover:bg-[#00546d] disabled:cursor-not-allowed disabled:opacity-70 sm:px-12"
-              >
-                {status === "submitting" ? "Sending…" : "Submit"}
-              </button>
+              <div className="flex flex-col gap-4 sm:flex-row">
+                <input
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="Enter your email"
+                  aria-label="Your email address"
+                  className="w-full max-w-105 rounded-full bg-white px-6 py-4 text-base text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-white/60"
+                />
+                <button
+                  type="submit"
+                  disabled={status === "submitting"}
+                  className="shrink-0 rounded-full bg-[#006786] px-10 py-4 text-base font-semibold text-white shadow-md transition-colors hover:bg-[#00546d] disabled:cursor-not-allowed disabled:opacity-70 sm:px-12"
+                >
+                  {status === "submitting" ? "Sending…" : "Submit"}
+                </button>
+              </div>
             </form>
             {status === "success" ? (
               <p className="mt-4 text-sm font-medium text-white">

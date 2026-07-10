@@ -39,24 +39,32 @@ export function HowItWorksHero() {
             for depth, intentionality, and meaningful human connection.
           </p>
 
-          <form
-            onSubmit={handleSubmit}
-            className="mt-10 flex flex-col gap-4 sm:flex-row"
-          >
+          <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-4">
             <input
-              name="email"
-              type="email"
+              name="name"
+              type="text"
               required
-              placeholder="Enter your email address"
+              placeholder="Enter your name"
+              aria-label="Your name"
               className="w-full max-w-95 rounded-full bg-white px-6 py-4 text-base text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-white/70"
             />
-            <button
-              type="submit"
-              disabled={status === "submitting"}
-              className="shrink-0 rounded-2xl bg-[#1f4f63] px-8 py-4 font-semibold text-white shadow-md transition-colors hover:bg-[#193f4f] disabled:cursor-not-allowed disabled:opacity-70"
-            >
-              {status === "submitting" ? "Joining…" : "Join Waitlist"}
-            </button>
+            <div className="flex flex-col gap-4 sm:flex-row">
+              <input
+                name="email"
+                type="email"
+                required
+                placeholder="Enter your email address"
+                aria-label="Your email address"
+                className="w-full max-w-95 rounded-full bg-white px-6 py-4 text-base text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-white/70"
+              />
+              <button
+                type="submit"
+                disabled={status === "submitting"}
+                className="shrink-0 rounded-2xl bg-[#1f4f63] px-8 py-4 font-semibold text-white shadow-md transition-colors hover:bg-[#193f4f] disabled:cursor-not-allowed disabled:opacity-70"
+              >
+                {status === "submitting" ? "Joining…" : "Join Waitlist"}
+              </button>
+            </div>
           </form>
           {status === "success" ? (
             <p className="mt-4 text-sm font-semibold text-[#1f4f63]">

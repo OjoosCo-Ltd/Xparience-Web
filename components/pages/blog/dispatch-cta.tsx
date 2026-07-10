@@ -35,24 +35,34 @@ export function DispatchCta() {
           </p>
 
           <form
-            className="mx-auto mt-10 flex max-w-lg flex-col gap-3 sm:flex-row"
+            className="mx-auto mt-10 flex max-w-lg flex-col gap-3"
             onSubmit={handleSubmit}
           >
             <input
-              name="email"
-              type="email"
+              name="name"
+              type="text"
               required
-              placeholder="Your email address"
-              aria-label="Your email address"
+              placeholder="Your name"
+              aria-label="Your name"
               className="w-full rounded-full bg-white px-6 py-4 text-base text-slate-700 shadow-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand/40"
             />
-            <button
-              type="submit"
-              disabled={status === "submitting"}
-              className="shrink-0 rounded-full bg-[#1f4f63] px-8 py-4 text-base font-semibold text-white shadow-md transition-colors hover:bg-[#173e4e] disabled:cursor-not-allowed disabled:opacity-70"
-            >
-              {status === "submitting" ? "Sending…" : "Subscribe"}
-            </button>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <input
+                name="email"
+                type="email"
+                required
+                placeholder="Your email address"
+                aria-label="Your email address"
+                className="w-full rounded-full bg-white px-6 py-4 text-base text-slate-700 shadow-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand/40"
+              />
+              <button
+                type="submit"
+                disabled={status === "submitting"}
+                className="shrink-0 rounded-full bg-[#1f4f63] px-8 py-4 text-base font-semibold text-white shadow-md transition-colors hover:bg-[#173e4e] disabled:cursor-not-allowed disabled:opacity-70"
+              >
+                {status === "submitting" ? "Sending…" : "Subscribe"}
+              </button>
+            </div>
           </form>
           {status === "success" ? (
             <p className="mt-4 text-sm font-semibold text-[#1f4f63]">
