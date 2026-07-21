@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 import {
   Accordion,
   AccordionContent,
@@ -5,7 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const FAQS = [
+const FAQS: { question: string; answer: ReactNode; hidden?: boolean }[] = [
   // About Xparience
   {
     question: "What is Xparience?",
@@ -158,6 +160,7 @@ const FAQS = [
   },
   {
     question: "What is the Elite human-assisted matchmaking service?",
+    hidden: true,
     answer: (
       <>
         Elite is our premium tier that gives you access to a dedicated human
@@ -261,6 +264,7 @@ const FAQS = [
   // Subscriptions and Pricing
   {
     question: "Is Xparience free to use?",
+    hidden: true,
     answer: (
       <>
         Xparience offers a free tier that gives you access to core features,
@@ -273,6 +277,7 @@ const FAQS = [
   },
   {
     question: "How do I cancel my subscription?",
+    hidden: true,
     answer: (
       <>
         You can cancel your subscription at any time from the app&rsquo;s
@@ -284,6 +289,7 @@ const FAQS = [
   },
   {
     question: "Do you offer refunds?",
+    hidden: true,
     answer: (
       <>
         We do not offer refunds for unused portions of a subscription period,
@@ -346,7 +352,7 @@ export function FaqSection() {
         defaultValue="faq-0"
         className="mx-auto mt-12 w-full max-w-4xl gap-6"
       >
-        {FAQS.map((faq, i) => (
+        {FAQS.filter((faq) => !faq.hidden).map((faq, i) => (
           <AccordionItem
             key={i}
             value={`faq-${i}`}
