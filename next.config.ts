@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Allow phones/tablets on the local network to load the dev server
+  // (Next 16 blocks cross-origin dev requests by default). Add more IPs
+  // here if your machine's LAN address changes.
+  allowedDevOrigins: ["192.168.100.4"],
   images: {
     remotePatterns: [
       {
