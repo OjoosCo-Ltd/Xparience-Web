@@ -4,11 +4,13 @@ import Image from "next/image";
 const GUIDES = [
   {
     image: "/images/swipe.png",
+    alt: "Hands holding a worn leather-bound journal over a wooden table",
     title: "Unlearning the Swipe",
     body: "How to de-program the transactional mindset of modern dating and return to genuine human curiosity.",
   },
   {
     image: "/images/talk.png",
+    alt: "Turquoise ink swirling through dark water",
     title: "The Silence after the Talk",
     body: "Processing the emotional aftermath of vulnerability and why silence doesn't always mean rejection.",
   },
@@ -46,7 +48,7 @@ export function ArtOfBecoming() {
             <div key={guide.title}>
               <Image
                 src={guide.image}
-                alt=""
+                alt={guide.alt}
                 width={538}
                 height={337}
                 className="w-full rounded-2xl object-cover"

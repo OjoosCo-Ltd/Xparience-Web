@@ -6,19 +6,22 @@ import { ContactFormSection } from "@/components/pages/contact/contact-form-sect
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: "Contact — Xparience",
+  title: "Contact",
   description:
     "We're here to help. Whether you have a question, need support, or want to learn more about Xparience, our team is here to help every step of the way.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
   return (
     <>
       <SiteHeader />
-      <ContactHero />
-      <Reveal>
-        <ContactFormSection />
-      </Reveal>
+      <main className="contents">
+        <ContactHero />
+        <Reveal>
+          <ContactFormSection />
+        </Reveal>
+      </main>
       <SiteFooter />
     </>
   );

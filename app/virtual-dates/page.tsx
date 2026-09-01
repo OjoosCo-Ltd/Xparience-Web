@@ -10,31 +10,34 @@ import { MoreThanScreen } from "@/components/pages/virtual-dates/more-than-scree
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: "Virtual Dates — Xparience",
+  title: "Virtual Dates",
   description:
-    "Spark a deeper connection before you meet face-to-face. Curated virtual dates where chemistry is tested through shared laughter, gaming, and cinematic storytelling.",
+    "Virtual dating, reimagined. Spark a deeper connection before you meet face-to-face with curated virtual dates — chemistry tested through shared laughter, gaming, and cinematic storytelling.",
+  alternates: { canonical: "/virtual-dates" },
 };
 
 export default function VirtualDatesPage() {
   return (
     <>
       <SiteHeader />
-      <VirtualDatesHero />
-      <Reveal>
-        <MoreThanMessaging />
-      </Reveal>
-      <Reveal>
-        <DateExperiences />
-      </Reveal>
-      <Reveal>
-        <NaturalMeeting />
-      </Reveal>
-      <Reveal>
-        <LevelUp />
-      </Reveal>
-      <Reveal>
-        <MoreThanScreen />
-      </Reveal>
+      <main className="contents">
+        <VirtualDatesHero />
+        <Reveal>
+          <MoreThanMessaging />
+        </Reveal>
+        <Reveal>
+          <DateExperiences />
+        </Reveal>
+        <Reveal>
+          <NaturalMeeting />
+        </Reveal>
+        <Reveal>
+          <LevelUp />
+        </Reveal>
+        <Reveal>
+          <MoreThanScreen />
+        </Reveal>
+      </main>
       <SiteFooter />
     </>
   );

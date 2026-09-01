@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const FAQS = [
+export const PRICING_FAQS = [
   {
     question: "Is Xparience free to use?",
     answer:
@@ -36,7 +36,7 @@ export function PricingFaq() {
         defaultValue="pricing-faq-0"
         className="mx-auto mt-12 w-full max-w-4xl gap-6"
       >
-        {FAQS.map((faq, i) => (
+        {PRICING_FAQS.map((faq, i) => (
           <AccordionItem
             key={i}
             value={`pricing-faq-${i}`}

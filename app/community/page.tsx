@@ -12,37 +12,40 @@ import { ReadyDifferent } from "@/components/pages/community/ready-different";
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: "Community — Xparience",
+  title: "Community",
   description:
     "Beyond the superficiality of swiping. Experience a community designed for meaningful relationships, intentional introductions, and genuine connection.",
+  alternates: { canonical: "/community" },
 };
 
 export default function CommunityPage() {
   return (
     <>
       <SiteHeader />
-      <CommunityHero />
-      <Reveal>
-        <CommunityTrust />
-      </Reveal>
-      <Reveal>
-        <BeyondOneToOne />
-      </Reveal>
-      <Reveal>
-        <NotDating />
-      </Reveal>
-      <Reveal>
-        <WonderWhy />
-      </Reveal>
-      <Reveal>
-        <ShrinkToFit />
-      </Reveal>
-      <Reveal>
-        <NavigateAlone />
-      </Reveal>
-      <Reveal>
-        <ReadyDifferent />
-      </Reveal>
+      <main className="contents">
+        <CommunityHero />
+        <Reveal>
+          <CommunityTrust />
+        </Reveal>
+        <Reveal>
+          <BeyondOneToOne />
+        </Reveal>
+        <Reveal>
+          <NotDating />
+        </Reveal>
+        <Reveal>
+          <WonderWhy />
+        </Reveal>
+        <Reveal>
+          <ShrinkToFit />
+        </Reveal>
+        <Reveal>
+          <NavigateAlone />
+        </Reveal>
+        <Reveal>
+          <ReadyDifferent />
+        </Reveal>
+      </main>
       <SiteFooter />
     </>
   );

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { Reveal } from "@/components/reveal";
 import { Hero } from "@/components/pages/home/hero";
@@ -9,29 +10,35 @@ import { ReviewsSection } from "@/components/pages/home/reviews-section";
 import { WaitlistSection } from "@/components/pages/home/waitlist-section";
 import { SiteFooter } from "@/components/site-footer";
 
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
+
 export default function Home() {
   return (
     <>
       <SiteHeader />
-      <Hero />
-      <Reveal>
-        <BeyondSection />
-      </Reveal>
-      <Reveal>
-        <ExperienceSection />
-      </Reveal>
-      <Reveal>
-        <WellbeingSection />
-      </Reveal>
-      <Reveal>
-        <HowItWorksSection />
-      </Reveal>
-      <Reveal>
-        <ReviewsSection />
-      </Reveal>
-      <Reveal>
-        <WaitlistSection />
-      </Reveal>
+      <main className="contents">
+        <Hero />
+        <Reveal>
+          <BeyondSection />
+        </Reveal>
+        <Reveal>
+          <ExperienceSection />
+        </Reveal>
+        <Reveal>
+          <WellbeingSection />
+        </Reveal>
+        <Reveal>
+          <HowItWorksSection />
+        </Reveal>
+        <Reveal>
+          <ReviewsSection />
+        </Reveal>
+        <Reveal>
+          <WaitlistSection />
+        </Reveal>
+      </main>
       <SiteFooter />
     </>
   );

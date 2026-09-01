@@ -14,6 +14,7 @@ const FILTERS = [
 const ARTICLES = [
   {
     image: "/images/silence.png",
+    alt: "Couple sitting quietly together on a balcony at sunset overlooking a city",
     badge: "Connection",
     badgeColor: "bg-[#1f4f63]",
     date: "May 12, 2024",
@@ -24,6 +25,7 @@ const ARTICLES = [
   },
   {
     image: "/images/detox.png",
+    alt: "Bright minimalist room with white tables and chairs by large windows",
     badge: "Mental Wellness",
     badgeColor: "bg-[#95604a]",
     date: "May 08, 2024",
@@ -34,6 +36,7 @@ const ARTICLES = [
   },
   {
     image: "/images/sustainable.png",
+    alt: "Friends laughing together around a candlelit dinner table at dusk",
     badge: "Community",
     badgeColor: "bg-[#1f4f63]",
     date: "May 03, 2024",
@@ -44,6 +47,7 @@ const ARTICLES = [
   },
   {
     image: "/images/creative.png",
+    alt: "Desk with an open notebook, laptop, cup of tea, and a succulent plant",
     badge: "Virtual Ideas",
     badgeColor: "bg-[#1f4f63]",
     date: "April 28, 2024",
@@ -54,6 +58,7 @@ const ARTICLES = [
   },
   {
     image: "/images/motion.png",
+    alt: "Woman stretching in a seated yoga pose on a mat in a sunlit room",
     badge: "Mental Wellness",
     badgeColor: "bg-[#95604a]",
     date: "April 22, 2024",
@@ -64,6 +69,7 @@ const ARTICLES = [
   },
   {
     image: "/images/hobbies.png",
+    alt: "Hands shaping a clay pot on a pottery wheel",
     badge: "Creativity",
     badgeColor: "bg-[#1f4f63]",
     date: "April 18, 2024",
@@ -119,7 +125,7 @@ export function ArchiveGrid() {
               <div className="relative">
                 <Image
                   src={article.image}
-                  alt=""
+                  alt={article.alt}
                   width={568}
                   height={426}
                   className="aspect-[4/3] w-full object-cover"

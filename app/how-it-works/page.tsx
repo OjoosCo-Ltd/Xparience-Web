@@ -8,25 +8,28 @@ import { ReservePlace } from "@/components/pages/how-it-works/reserve-place";
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: "How It Works — Xparience",
+  title: "How It Works",
   description:
-    "Ready to experience something different? Escape the cycle of superficial scrolling and join a space designed for depth, intentionality, and meaningful human connection.",
+    "See how Xparience's mindful dating experience works. Escape the cycle of superficial scrolling and join a space designed for depth, intentionality, and meaningful human connection.",
+  alternates: { canonical: "/how-it-works" },
 };
 
 export default function HowItWorksPage() {
   return (
     <>
       <SiteHeader />
-      <HowItWorksHero />
-      <Reveal>
-        <ThoughtfulWay />
-      </Reveal>
-      <Reveal>
-        <DesignedForWellbeing />
-      </Reveal>
-      <Reveal>
-        <ReservePlace />
-      </Reveal>
+      <main className="contents">
+        <HowItWorksHero />
+        <Reveal>
+          <ThoughtfulWay />
+        </Reveal>
+        <Reveal>
+          <DesignedForWellbeing />
+        </Reveal>
+        <Reveal>
+          <ReservePlace />
+        </Reveal>
+      </main>
       <SiteFooter />
     </>
   );

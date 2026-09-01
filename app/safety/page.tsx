@@ -9,28 +9,31 @@ import { SafetyTips } from "@/components/pages/safety/safety-tips";
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: "Safety — Xparience",
+  title: "Safety",
   description:
     "We've designed Xparience to be a digital sanctuary where human storytelling thrives in a secure, respectful environment.",
+  alternates: { canonical: "/safety" },
 };
 
 export default function SafetyPage() {
   return (
     <>
       <SiteHeader />
-      <SafetyHero />
-      <Reveal>
-        <SafetyPillars />
-      </Reveal>
-      <Reveal>
-        <CommunityGuidelines />
-      </Reveal>
-      <Reveal>
-        <PrivacyProtection />
-      </Reveal>
-      <Reveal>
-        <SafetyTips />
-      </Reveal>
+      <main className="contents">
+        <SafetyHero />
+        <Reveal>
+          <SafetyPillars />
+        </Reveal>
+        <Reveal>
+          <CommunityGuidelines />
+        </Reveal>
+        <Reveal>
+          <PrivacyProtection />
+        </Reveal>
+        <Reveal>
+          <SafetyTips />
+        </Reveal>
+      </main>
       <SiteFooter />
     </>
   );

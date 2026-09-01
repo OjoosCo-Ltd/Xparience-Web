@@ -10,31 +10,34 @@ import { HumanCentricSection } from "@/components/pages/about/human-centric-sect
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: "About — Xparience",
+  title: "About",
   description:
     "Our mission is to foster emotional well-being by creating shared digital experiences that feel as intimate and tangible as physical presence.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
   return (
     <>
       <SiteHeader />
-      <AboutHero />
-      <Reveal>
-        <WhatSection />
-      </Reveal>
-      <Reveal>
-        <AboutExperienceSection />
-      </Reveal>
-      <Reveal>
-        <NotDatingSection />
-      </Reveal>
-      <Reveal>
-        <SharedSection />
-      </Reveal>
-      <Reveal>
-        <HumanCentricSection />
-      </Reveal>
+      <main className="contents">
+        <AboutHero />
+        <Reveal>
+          <WhatSection />
+        </Reveal>
+        <Reveal>
+          <AboutExperienceSection />
+        </Reveal>
+        <Reveal>
+          <NotDatingSection />
+        </Reveal>
+        <Reveal>
+          <SharedSection />
+        </Reveal>
+        <Reveal>
+          <HumanCentricSection />
+        </Reveal>
+      </main>
       <SiteFooter />
     </>
   );

@@ -9,28 +9,31 @@ import { DateBenefits } from "@/components/pages/date-suggestions/date-benefits"
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: "Date Suggestions — Xparience",
+  title: "Date Suggestions",
   description:
     "Our intelligent algorithm analyses your interests, personality, and shared chemistry to architect real-world date experiences, thoughtfully curated for two.",
+  alternates: { canonical: "/date-suggestions" },
 };
 
 export default function DateSuggestionsPage() {
   return (
     <>
       <SiteHeader />
-      <DateHero />
-      <Reveal>
-        <CuratedExperiences />
-      </Reveal>
-      <Reveal>
-        <CompatibilityInsights />
-      </Reveal>
-      <Reveal>
-        <ExploreMood />
-      </Reveal>
-      <Reveal>
-        <DateBenefits />
-      </Reveal>
+      <main className="contents">
+        <DateHero />
+        <Reveal>
+          <CuratedExperiences />
+        </Reveal>
+        <Reveal>
+          <CompatibilityInsights />
+        </Reveal>
+        <Reveal>
+          <ExploreMood />
+        </Reveal>
+        <Reveal>
+          <DateBenefits />
+        </Reveal>
+      </main>
       <SiteFooter />
     </>
   );

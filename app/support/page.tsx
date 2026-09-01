@@ -7,22 +7,25 @@ import { ContactSection } from "@/components/pages/support/contact-section";
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: "Support — Xparience",
+  title: "Support",
   description:
     "Find help, guidance, and answers to your questions about Xparience anytime.",
+  alternates: { canonical: "/support" },
 };
 
 export default function SupportPage() {
   return (
     <>
       <SiteHeader />
-      <SupportHero />
-      <Reveal>
-        <FaqSection />
-      </Reveal>
-      <Reveal>
-        <ContactSection />
-      </Reveal>
+      <main className="contents">
+        <SupportHero />
+        <Reveal>
+          <FaqSection />
+        </Reveal>
+        <Reveal>
+          <ContactSection />
+        </Reveal>
+      </main>
       <SiteFooter />
     </>
   );

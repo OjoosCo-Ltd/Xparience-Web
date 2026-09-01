@@ -9,7 +9,7 @@ import { VibrantCommunity } from "@/components/pages/features/vibrant-community"
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: "Features — Xparience",
+  title: "Features",
   description:
     "Don't just chat. Transform your connection with shared real-time experiences: watch movies, play games, shop, and plan meals together.",
 };
@@ -18,19 +18,21 @@ export default function FeaturesPage() {
   return (
     <>
       <SiteHeader />
-      <FeaturesHero />
-      <Reveal>
-        <SharedExperiences />
-      </Reveal>
-      <Reveal>
-        <CommunityWellbeing />
-      </Reveal>
-      <Reveal>
-        <CuratedDates />
-      </Reveal>
-      <Reveal>
-        <VibrantCommunity />
-      </Reveal>
+      <main className="contents">
+        <FeaturesHero />
+        <Reveal>
+          <SharedExperiences />
+        </Reveal>
+        <Reveal>
+          <CommunityWellbeing />
+        </Reveal>
+        <Reveal>
+          <CuratedDates />
+        </Reveal>
+        <Reveal>
+          <VibrantCommunity />
+        </Reveal>
+      </main>
       <SiteFooter />
     </>
   );

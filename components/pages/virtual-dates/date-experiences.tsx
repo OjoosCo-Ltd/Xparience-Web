@@ -10,6 +10,7 @@ const EXPERIENCES = [
     quote:
       "“It creates natural conversation topics and comfortable silence—the ultimate compatibility test.”",
     image: "/images/cinematic.png",
+    alt: "Couple on a virtual movie date, watching a film in a cinema with popcorn and drinks",
     imageRight: false,
   },
   {
@@ -19,6 +20,7 @@ const EXPERIENCES = [
     quote:
       "“Play lowers barriers and encourages the kind of spontaneity that builds lasting attraction.”",
     image: "/images/through.png",
+    alt: "Hands holding a game controller in front of a screen during an online game date",
     imageRight: true,
   },
   {
@@ -28,6 +30,7 @@ const EXPERIENCES = [
     quote:
       "“Planning together reveals real-life compatibility and how you navigate decisions as a pair.”",
     image: "/images/dreaming.png",
+    alt: "Tablet showing a meal-planning app on a kitchen counter beside fresh vegetables",
     imageRight: false,
   },
   {
@@ -37,6 +40,7 @@ const EXPERIENCES = [
     quote:
       "“Exploring each other’s tastes and shopping preferences helps strengthen connection and creates a deeper sense of familiarity before meeting in person.”",
     image: "/images/chemistry.png",
+    alt: "3D illustration of pink shopping bags floating among pastel spheres",
     imageRight: true,
   },
 ];
@@ -52,7 +56,7 @@ export function DateExperiences() {
           >
             <Image
               src={experience.image}
-              alt=""
+              alt={experience.alt}
               width={912}
               height={513}
               className={cn(

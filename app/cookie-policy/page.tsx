@@ -5,29 +5,32 @@ import { CookieContent } from "@/components/pages/cookie-policy/cookie-content";
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy — Xparience",
+  title: "Cookie Policy",
   description:
     "How Xparience uses cookies, what choices you have, and how we protect your privacy under UK GDPR and PECR.",
+  alternates: { canonical: "/cookie-policy" },
 };
 
 export default function CookiePolicyPage() {
   return (
     <>
       <SiteHeader />
-      <LegalHero
-        chip="Legal · Compliance"
-        title="Cookie Policy"
-        description={
-          <>
-            How Xparience uses cookies, what choices you have,{" "}
-            <br className="hidden lg:block" />
-            and how we protect your privacy under UK GDPR and{" "}
-            <br className="hidden lg:block" />
-            PECR.
-          </>
-        }
-      />
-      <CookieContent />
+      <main className="contents">
+        <LegalHero
+          chip="Legal · Compliance"
+          title="Cookie Policy"
+          description={
+            <>
+              How Xparience uses cookies, what choices you have,{" "}
+              <br className="hidden lg:block" />
+              and how we protect your privacy under UK GDPR and{" "}
+              <br className="hidden lg:block" />
+              PECR.
+            </>
+          }
+        />
+        <CookieContent />
+      </main>
       <SiteFooter />
     </>
   );

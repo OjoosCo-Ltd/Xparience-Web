@@ -9,28 +9,31 @@ import { ArtOfBecoming } from "@/components/pages/well-being/art-of-becoming";
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: "Well-Being — Xparience",
+  title: "Well-Being",
   description:
     "We're here for the spark, the flame, and the long haul. Xparience provides the emotional tools to help you stay centered.",
+  alternates: { canonical: "/well-being" },
 };
 
 export default function WellBeingPage() {
   return (
     <>
       <SiteHeader />
-      <WellbeingPageHero />
-      <Reveal>
-        <ComplexTides />
-      </Reveal>
-      <Reveal>
-        <WellnessToolkit />
-      </Reveal>
-      <Reveal>
-        <ModernLandscape />
-      </Reveal>
-      <Reveal>
-        <ArtOfBecoming />
-      </Reveal>
+      <main className="contents">
+        <WellbeingPageHero />
+        <Reveal>
+          <ComplexTides />
+        </Reveal>
+        <Reveal>
+          <WellnessToolkit />
+        </Reveal>
+        <Reveal>
+          <ModernLandscape />
+        </Reveal>
+        <Reveal>
+          <ArtOfBecoming />
+        </Reveal>
+      </main>
       <SiteFooter />
     </>
   );
