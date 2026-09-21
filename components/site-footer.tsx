@@ -22,9 +22,9 @@ const LINK_COLUMNS = [
     links: [
       { label: "FAQ", href: "/support#faq" },
       { label: "Contact", href: "/contact" },
-      // Blog is hidden until that page goes live:
+      // Blog and Pricing are hidden until those pages go live:
       // { label: "Blog", href: "/blog" },
-      { label: "Pricing", href: "/pricing" },
+      // { label: "Pricing", href: "/pricing" },
       { label: "Press at Xparience", href: "/press" },
     ],
   },
